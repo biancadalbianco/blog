@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="noticia">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <link rel="Stylesheet" href="./css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row" ng-controller="RestNoticia">
+            <div class="col-12">
+                <h1>{{publicacoes.title}}</h1>
+                <img  id="imagemnot"class="img-fluid pb-5" ng-src="https://api-fake-blog.herokuapp.com{{ publicacoes.thumbImage }}">
+                <p class="fs-5 text-white text-center">{{ publicacoes.description }}</p>
+            <p class="fs-6 text-white text-center">{{ publicacoes.profileName }}</p>
+            <p class="fs-6 text-white text-center">{{ publicacoes.postDate }}</p>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
